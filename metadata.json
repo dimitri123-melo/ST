@@ -1,0 +1,7 @@
+{
+  "name": "St Bernard University Institute",
+  "description": "Official bilingual portal for St Bernard University Institute (Institut Universitaire St Bernard) in Douala, Cameroon.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
