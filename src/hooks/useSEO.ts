@@ -63,6 +63,12 @@ const SEO_MAP: Record<PageView, SEOConfig> = {
     titleEn: "Contact Us | St Bernard University Institute",
     descFr: "Contactez l'IUSB pour toute information ou pour organiser une visite de nos campus à Douala.",
     descEn: "Contact IUSB for any information or to schedule a visit to our campuses in Douala.",
+  },
+  gallery: {
+    titleFr: "Galerie & Visite Virtuelle | Institut Universitaire St Bernard",
+    titleEn: "Gallery & Virtual Tour | St Bernard University Institute",
+    descFr: "Découvrez l'Institut Universitaire St Bernard en images : campus, équipements, cérémonies et vie étudiante.",
+    descEn: "Discover St Bernard University Institute in pictures: campuses, facilities, ceremonies, and student life.",
   }
 };
 
