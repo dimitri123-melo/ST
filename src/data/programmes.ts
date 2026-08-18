@@ -38,7 +38,7 @@ export const DOMAIN_INFO: Record<string, DomainInfoItem> = {
     color: 'emerald',
     icon: 'Stethoscope',
     badgeColor: 'bg-emerald-50 text-emerald-800 border-emerald-200',
-    coverImage: '',
+    coverImage: '/images/Medical_workers_attending_to_patient_202608171133.jpeg',
   },
   engineering: {
     id: 'engineering',
@@ -57,7 +57,7 @@ export const DOMAIN_INFO: Record<string, DomainInfoItem> = {
     color: 'sky',
     icon: 'Cpu',
     badgeColor: 'bg-sky-50 text-sky-800 border-sky-200',
-    coverImage: '',
+    coverImage: '/images/Students_assembling_electrical_circuit_board_202608171133.jpeg',
   },
   business: {
     id: 'business',
@@ -76,7 +76,7 @@ export const DOMAIN_INFO: Record<string, DomainInfoItem> = {
     color: 'amber',
     icon: 'Briefcase',
     badgeColor: 'bg-amber-50 text-amber-900 border-amber-200',
-    coverImage: '',
+    coverImage: '/images/People_attending_a_meeting_202608171133.jpeg',
   },
   commerce: {
     id: 'business',
@@ -95,7 +95,7 @@ export const DOMAIN_INFO: Record<string, DomainInfoItem> = {
     color: 'amber',
     icon: 'Briefcase',
     badgeColor: 'bg-amber-50 text-amber-900 border-amber-200',
-    coverImage: '',
+    coverImage: '/images/People_attending_a_meeting_202608171133.jpeg',
   },
   agriculture: {
     id: 'agriculture',
@@ -114,7 +114,7 @@ export const DOMAIN_INFO: Record<string, DomainInfoItem> = {
     color: 'green',
     icon: 'Sprout',
     badgeColor: 'bg-emerald-50 text-emerald-800 border-emerald-200',
-    coverImage: '',
+    coverImage: '/images/Woman_working_in_field_202608171133.jpeg',
   },
   social_sciences: {
     id: 'social_sciences',
@@ -133,7 +133,7 @@ export const DOMAIN_INFO: Record<string, DomainInfoItem> = {
     color: 'rose',
     icon: 'Palette',
     badgeColor: 'bg-rose-50 text-rose-800 border-rose-200',
-    coverImage: '',
+    coverImage: '/images/Culinary_students_with_carved_fruit_202608171134.jpeg',
   },
   education: {
     id: 'education',
@@ -152,7 +152,7 @@ export const DOMAIN_INFO: Record<string, DomainInfoItem> = {
     color: 'indigo',
     icon: 'Scale',
     badgeColor: 'bg-indigo-50 text-indigo-800 border-indigo-200',
-    coverImage: '',
+    coverImage: '/images/Students_in_classroom_lecture_202608171133.jpeg',
   },
 };
 

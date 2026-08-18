@@ -126,7 +126,7 @@ export interface NewsArticle {
     en: string[];
   };
   imageUrl: string;
-  visualKey?: 'delegation-parade' | 'promoter-founder' | 'student-uniform' | 'biomedical-defense' | 'nursing-parade' | 'exam-classroom' | 'clinical-simulation' | 'laptop-distribution' | 'agriculture-practical' | 'bonaberi-facade' | 'mboppi-facade' | 'campus-collage';
+  visualKey?: 'delegation-parade' | 'promoter-founder' | 'student-uniform' | 'biomedical-defense' | 'nursing-parade' | 'exam-classroom' | 'clinical-simulation' | 'laptop-distribution' | 'agriculture-practical' | 'bonaberi-facade' | 'mboppi-facade' | 'campus-collage' | 'culinary-class' | 'fruit-carving' | 'field-work' | 'electrical-lab' | 'maritime-training';
   featured?: boolean;
 }
 
@@ -136,9 +136,9 @@ export interface GalleryItem {
     fr: string;
     en: string;
   };
-  category: 'campus' | 'students' | 'biomedical' | 'engineering' | 'agriculture' | 'events' | 'leadership';
+  category: 'campus' | 'students' | 'biomedical' | 'engineering' | 'agriculture' | 'events' | 'leadership' | 'tourism' | 'maritime';
   imageUrl: string;
-  visualKey?: 'delegation-parade' | 'promoter-founder' | 'student-uniform' | 'biomedical-defense' | 'nursing-parade' | 'exam-classroom' | 'clinical-simulation' | 'laptop-distribution' | 'agriculture-practical' | 'bonaberi-facade' | 'mboppi-facade' | 'campus-collage';
+  visualKey?: 'delegation-parade' | 'promoter-founder' | 'student-uniform' | 'biomedical-defense' | 'nursing-parade' | 'exam-classroom' | 'clinical-simulation' | 'laptop-distribution' | 'agriculture-practical' | 'bonaberi-facade' | 'mboppi-facade' | 'campus-collage' | 'culinary-class' | 'fruit-carving' | 'field-work' | 'electrical-lab' | 'maritime-training';
   caption: {
     fr: string;
     en: string;

@@ -143,60 +143,76 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="p-4 rounded-2xl bg-emerald-800/50 border border-emerald-700/60 space-y-2">
-              <div className="w-9 h-9 rounded-xl bg-amber-400 text-emerald-950 flex items-center justify-center font-bold">
-                <Car className="w-5 h-5" />
+            <div className="group relative p-5 rounded-2xl border border-emerald-700/60 overflow-hidden flex flex-col justify-end min-h-[160px]">
+              <img src="/images/Woman_sitting_inside_green_car_202608171132.jpeg" alt="Auto Ecole" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/80 to-transparent"></div>
+              <div className="relative z-10 space-y-2">
+                <div className="w-8 h-8 rounded-lg bg-amber-400 text-emerald-950 flex items-center justify-center font-bold shadow-md">
+                  <Car className="w-4 h-4" />
+                </div>
+                <h3 className="font-bold text-sm text-white leading-tight">
+                  {language === 'fr' ? 'Auto-École Offerte' : 'Free Driving School'}
+                </h3>
+                <p className="text-[11px] text-emerald-200/90 leading-relaxed line-clamp-2">
+                  {language === 'fr'
+                    ? 'Formation au permis de conduire.'
+                    : 'Free driving license course.'}
+                </p>
               </div>
-              <h3 className="font-bold text-xs sm:text-sm text-white">
-                {language === 'fr' ? 'Auto-École Offerte' : 'Free Driving School'}
-              </h3>
-              <p className="text-xs text-emerald-200/90 leading-relaxed">
-                {language === 'fr'
-                  ? 'Formation au permis de conduire offerte auprès de notre auto-école partenaire certifiée.'
-                  : 'Free driving license course with our certified partner driving academy.'}
-              </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-emerald-800/50 border border-emerald-700/60 space-y-2">
-              <div className="w-9 h-9 rounded-xl bg-amber-400 text-emerald-950 flex items-center justify-center font-bold">
-                <HeartPulse className="w-5 h-5" />
+            <div className="group relative p-5 rounded-2xl border border-emerald-700/60 overflow-hidden flex flex-col justify-end min-h-[160px]">
+              <img src="/images/Medical_workers_attending_to_patient_202608171133.jpeg" alt="Santé" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/80 to-transparent"></div>
+              <div className="relative z-10 space-y-2">
+                <div className="w-8 h-8 rounded-lg bg-amber-400 text-emerald-950 flex items-center justify-center font-bold shadow-md">
+                  <HeartPulse className="w-4 h-4" />
+                </div>
+                <h3 className="font-bold text-sm text-white leading-tight">
+                  {language === 'fr' ? 'Santé à -50%' : '50% Health Coverage'}
+                </h3>
+                <p className="text-[11px] text-emerald-200/90 leading-relaxed line-clamp-2">
+                  {language === 'fr'
+                    ? '50% sur les soins dans nos hôpitaux.'
+                    : '50% discount in our partner hospitals.'}
+                </p>
               </div>
-              <h3 className="font-bold text-xs sm:text-sm text-white">
-                {language === 'fr' ? 'Santé à -50%' : '50% Health Coverage'}
-              </h3>
-              <p className="text-xs text-emerald-200/90 leading-relaxed">
-                {language === 'fr'
-                  ? '50% de réduction sur consultations, soins et imagerie dans nos 3 hôpitaux partenaires St Bernard.'
-                  : '50% discount on consultations and imaging in our 3 partner St Bernard hospitals.'}
-              </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-emerald-800/50 border border-emerald-700/60 space-y-2">
-              <div className="w-9 h-9 rounded-xl bg-amber-400 text-emerald-950 flex items-center justify-center font-bold">
-                <Laptop className="w-5 h-5" />
+            <div className="group relative p-5 rounded-2xl border border-emerald-700/60 overflow-hidden flex flex-col justify-end min-h-[160px]">
+              <img src="/images/Students_using_laptops_in_classroom_202608171133.jpeg" alt="Laptop" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/80 to-transparent"></div>
+              <div className="relative z-10 space-y-2">
+                <div className="w-8 h-8 rounded-lg bg-amber-400 text-emerald-950 flex items-center justify-center font-bold shadow-md">
+                  <Laptop className="w-4 h-4" />
+                </div>
+                <h3 className="font-bold text-sm text-white leading-tight">
+                  {language === 'fr' ? 'Laptop ou Smartphone' : 'Laptop or Smartphone'}
+                </h3>
+                <p className="text-[11px] text-emerald-200/90 leading-relaxed line-clamp-2">
+                  {language === 'fr'
+                    ? 'Équipement numérique offert.'
+                    : 'Digital device awarded.'}
+                </p>
               </div>
-              <h3 className="font-bold text-xs sm:text-sm text-white">
-                {language === 'fr' ? 'Laptop ou Smartphone' : 'Laptop or Smartphone'}
-              </h3>
-              <p className="text-xs text-emerald-200/90 leading-relaxed">
-                {language === 'fr'
-                  ? 'Équipement numérique offert pour les premiers inscrits afin de soutenir le travail personnel.'
-                  : 'Digital device awarded to early enrolled candidates to boost independent study.'}
-              </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-emerald-800/50 border border-emerald-700/60 space-y-2">
-              <div className="w-9 h-9 rounded-xl bg-amber-400 text-emerald-950 flex items-center justify-center font-bold">
-                <Award className="w-5 h-5" />
+            <div className="group relative p-5 rounded-2xl border border-emerald-700/60 overflow-hidden flex flex-col justify-end min-h-[160px]">
+              <img src="/images/Six_women_in_white_uniforms_202608171133.jpeg" alt="Uniforms" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105 object-top" />
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/80 to-transparent"></div>
+              <div className="relative z-10 space-y-2">
+                <div className="w-8 h-8 rounded-lg bg-amber-400 text-emerald-950 flex items-center justify-center font-bold shadow-md">
+                  <Award className="w-4 h-4" />
+                </div>
+                <h3 className="font-bold text-sm text-white leading-tight">
+                  {language === 'fr' ? '2 Uniformes Fournis' : '2 Tailored Uniforms'}
+                </h3>
+                <p className="text-[11px] text-emerald-200/90 leading-relaxed line-clamp-2">
+                  {language === 'fr'
+                    ? 'Tenues officielles académiques.'
+                    : 'Official academic uniforms.'}
+                </p>
               </div>
-              <h3 className="font-bold text-xs sm:text-sm text-white">
-                {language === 'fr' ? '2 Uniformes Fournis' : '2 Tailored Uniforms'}
-              </h3>
-              <p className="text-xs text-emerald-200/90 leading-relaxed">
-                {language === 'fr'
-                  ? 'Deux jeux de tenues officielles académiques remis dès la finalisation du dossier.'
-                  : 'Two sets of official academic uniforms delivered upon enrolment completion.'}
-              </p>
             </div>
           </div>
         </div>

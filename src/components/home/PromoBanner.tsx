@@ -57,17 +57,25 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ onClaimPromo }) => {
           </div>
 
           {/* 3 Core Gift Choices */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Option 1: Scholarship */}
-            <div className="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all flex items-start gap-4">
-              <div className="w-11 h-11 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
-                <Gift className="w-5 h-5" />
+            <div className="rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-amber-500/50 transition-all group flex flex-col">
+              <div className="h-48 w-full relative overflow-hidden bg-slate-800">
+                <img 
+                  src="/images/University_scholarship_promotional_advertisement_202608171134.jpeg" 
+                  alt="Tuition and Fee Schedule"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 w-10 h-10 rounded-lg bg-amber-500/90 text-slate-950 flex items-center justify-center shadow-lg">
+                  <Gift className="w-5 h-5" />
+                </div>
               </div>
-              <div className="space-y-1">
+              <div className="p-5 space-y-2 flex-1 flex flex-col">
                 <span className="text-[10px] uppercase font-bold text-amber-400 tracking-wider">
                   {language === 'fr' ? 'Option 1' : 'Option 1'}
                 </span>
-                <h4 className="text-base font-bold text-white">
+                <h4 className="text-lg font-bold text-white leading-tight">
                   {language === 'fr' ? 'Bourse de 60.000 FCFA' : '60,000 FCFA Scholarship'}
                 </h4>
                 <p className="text-xs text-slate-400 leading-relaxed">
@@ -79,40 +87,63 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ onClaimPromo }) => {
             </div>
 
             {/* Option 2: Laptop */}
-            <div className="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all flex items-start gap-4">
-              <div className="w-11 h-11 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
-                <Laptop className="w-5 h-5" />
+            <div className="rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-amber-500/50 transition-all group flex flex-col">
+              <div className="h-48 w-full relative overflow-hidden bg-slate-800">
+                <img 
+                  src="/images/Students_using_laptops_in_classroom_202608171133.jpeg" 
+                  alt="Student using Laptop"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute top-3 right-3 bg-amber-500 text-emerald-950 font-extrabold text-[10px] uppercase px-2.5 py-1 rounded-md shadow-sm">
+                  St Bernard
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 w-10 h-10 rounded-lg bg-amber-500/90 text-slate-950 flex items-center justify-center shadow-lg">
+                  <Laptop className="w-5 h-5" />
+                </div>
               </div>
-              <div className="space-y-1">
+              <div className="p-5 space-y-2 flex-1 flex flex-col">
                 <span className="text-[10px] uppercase font-bold text-amber-400 tracking-wider">
                   {language === 'fr' ? 'Option 2' : 'Option 2'}
                 </span>
-                <h4 className="text-base font-bold text-white">
+                <h4 className="text-lg font-bold text-white leading-tight">
                   {language === 'fr' ? 'Ordinateur Portable' : 'Student Laptop'}
                 </h4>
                 <p className="text-xs text-slate-400 leading-relaxed">
                   {language === 'fr'
-                    ? 'Équipement informatique pour vos travaux pratiques, projets et recherches en ligne.'
-                    : 'Computing equipment for practical course assignments and technical research.'}
+                    ? 'Équipement informatique professionnel pour vos travaux pratiques et recherches.'
+                    : 'Professional computing equipment for practical course assignments and technical research.'}
                 </p>
               </div>
             </div>
 
             {/* Option 3: Smartphone */}
-            <div className="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all flex items-start gap-4">
-              <div className="w-11 h-11 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
-                <Smartphone className="w-5 h-5" />
+            <div className="rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-amber-500/50 transition-all group flex flex-col">
+              <div className="h-48 w-full relative overflow-hidden bg-slate-800">
+                <img 
+                  src="/images/Man_using_phone_at_desk_202608171132.jpeg" 
+                  alt="Connected Smartphone"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+                  style={{ objectPosition: 'center 20%' }}
+                />
+                <div className="absolute top-3 right-3 bg-amber-500 text-emerald-950 font-extrabold text-[10px] uppercase px-2.5 py-1 rounded-md shadow-sm">
+                  St Bernard
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 w-10 h-10 rounded-lg bg-amber-500/90 text-slate-950 flex items-center justify-center shadow-lg">
+                  <Smartphone className="w-5 h-5" />
+                </div>
               </div>
-              <div className="space-y-1">
+              <div className="p-5 space-y-2 flex-1 flex flex-col">
                 <span className="text-[10px] uppercase font-bold text-amber-400 tracking-wider">
                   {language === 'fr' ? 'Option 3' : 'Option 3'}
                 </span>
-                <h4 className="text-base font-bold text-white">
+                <h4 className="text-lg font-bold text-white leading-tight">
                   {language === 'fr' ? 'Smartphone 4G / 5G' : 'Connected Smartphone'}
                 </h4>
                 <p className="text-xs text-slate-400 leading-relaxed">
                   {language === 'fr'
-                    ? 'Terminal mobile connecté pour accéder aux groupes pédagogiques et ressources numériques.'
+                    ? 'Terminal mobile connecté pour accéder aux groupes pédagogiques et ressources.'
                     : 'Connected mobile phone to access digital course portals and academic groups.'}
                 </p>
               </div>

@@ -4,123 +4,115 @@ import {
   HeartPulse,
   Car,
   Laptop,
-  CheckCircle2,
-  Stethoscope,
-  Cpu,
   GraduationCap,
-  ShieldCheck,
 } from 'lucide-react';
 
 export const PracticalExperienceSection: React.FC = () => {
   const { language } = useLanguage();
 
   return (
-    <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-100 text-emerald-900 font-bold text-xs uppercase tracking-wider">
-            <GraduationCap className="w-3.5 h-3.5 text-emerald-700" />
-            <span>{language === 'fr' ? 'Pédagogie Axée sur le Terrain' : 'Field-Oriented Practical Pedagogy'}</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif-academic text-slate-900">
-            {language === 'fr'
-              ? 'L\'Expérience Étudiante & Les Avantages Inclus'
-              : 'Student Experience & Included University Benefits'}
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 font-sans">
-            {language === 'fr'
-              ? 'À l\'Institut Universitaire St Bernard, nous combinons excellence académique et accompagnement concret pour garantir votre réussite.'
-              : 'At St Bernard University Institute, we merge academic rigor with concrete institutional support to ensure student achievement.'}
-          </p>
-        </div>
+    <section className="relative overflow-hidden border-b border-slate-200">
+      {/* Background Image (Immersive) */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/Medical_students_training_around_patient_202608171133.jpeg"
+          alt="Practical Student Experience"
+          className="w-full h-full object-cover filter brightness-[0.35]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/80 to-slate-900/60"></div>
+      </div>
 
-        {/* 4 Core Inclusions */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
-          {/* Card 1: 3 St Bernard Hospitals */}
-          <div className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-slate-400 hover:shadow-sm transition-all space-y-3 flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center">
-                <HeartPulse className="w-5 h-5" />
-              </div>
-              <h3 className="text-base font-bold text-slate-900">
-                {language === 'fr' ? 'Couverture Santé 50%' : '50% Healthcare Coverage'}
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                {language === 'fr'
-                  ? 'Accès privilégié aux 3 hôpitaux partenaires St Bernard avec réduction de 50% sur les consultations et soins pour tous les étudiants inscrits.'
-                  : 'Privileged access across 3 partner St Bernard hospitals with 50% discount on consultations and treatment for all enrolled students.'}
-              </p>
+          {/* Left: Text & Intro */}
+          <div className="space-y-6 max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs uppercase tracking-wider backdrop-blur-sm border border-emerald-500/30">
+              <GraduationCap className="w-4 h-4" />
+              <span>{language === 'fr' ? 'Pédagogie Axée sur le Terrain' : 'Field-Oriented Practical Pedagogy'}</span>
             </div>
-            <div className="pt-2 border-t border-slate-100 text-[11px] text-emerald-800 font-semibold flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>{language === 'fr' ? '3 Hôpitaux Partenaires' : '3 Partner Hospitals'}</span>
-            </div>
+            
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-serif-academic text-white leading-tight">
+              {language === 'fr'
+                ? 'L\'Expérience Étudiante & Les Avantages Inclus'
+                : 'Student Experience & Included University Benefits'}
+            </h2>
+            
+            <p className="text-base sm:text-lg text-slate-300 font-sans leading-relaxed">
+              {language === 'fr'
+                ? 'À l\'Institut Universitaire St Bernard, l\'apprentissage théorique ne suffit pas. Nous combinons excellence académique et accompagnement concret sur le terrain pour garantir votre intégration professionnelle.'
+                : 'At St Bernard University Institute, theoretical learning is not enough. We merge academic rigor with concrete institutional field support to ensure your professional integration.'}
+            </p>
           </div>
 
-          {/* Card 2: Free Driving School */}
-          <div className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-slate-400 hover:shadow-sm transition-all space-y-3 flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-50 text-amber-800 flex items-center justify-center">
-                <Car className="w-5 h-5" />
+          {/* Right: Immersive Inclusions */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            {/* Item 1 */}
+            <div className="group bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all text-white flex flex-col">
+              <div className="h-32 w-full relative overflow-hidden">
+                <img src="/images/Medical_workers_attending_to_patient_202608171133.jpeg" alt="Healthcare Coverage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent"></div>
+                <div className="absolute bottom-3 left-4 w-10 h-10 rounded-xl bg-emerald-500 text-emerald-950 flex items-center justify-center font-bold shadow-lg">
+                  <HeartPulse className="w-5 h-5" />
+                </div>
               </div>
-              <h3 className="text-base font-bold text-slate-900">
-                {language === 'fr' ? 'Auto-École Gratuite' : 'Free Driving School'}
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                {language === 'fr'
-                  ? 'Formation au permis de conduire dispensée par une auto-école agréée partenaire pour renforcer votre autonomie et votre CV.'
-                  : 'Driver license training delivered by an accredited partner driving school to boost student independence and employability.'}
-              </p>
+              <div className="p-5 space-y-2 flex-1">
+                <h3 className="text-lg font-bold mb-1">
+                  {language === 'fr' ? 'Couverture Santé' : 'Healthcare Coverage'}
+                </h3>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                  {language === 'fr'
+                    ? 'Accès privilégié à 3 hôpitaux partenaires avec réduction de 50% sur les consultations.'
+                    : 'Privileged access across 3 partner hospitals with 50% discount on consultations.'}
+                </p>
+              </div>
             </div>
-            <div className="pt-2 border-t border-slate-100 text-[11px] text-amber-800 font-semibold flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>{language === 'fr' ? 'Permis B Offert' : 'Category B License'}</span>
-            </div>
-          </div>
 
-          {/* Card 3: Uniforms & Equipment */}
-          <div className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-slate-400 hover:shadow-sm transition-all space-y-3 flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center">
-                <Laptop className="w-5 h-5" />
+            {/* Item 2 */}
+            <div className="group bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all text-white flex flex-col">
+              <div className="h-32 w-full relative overflow-hidden">
+                <img src="/images/Woman_sitting_inside_green_car_202608171132.jpeg" alt="Driving School" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent"></div>
+                <div className="absolute bottom-3 left-4 w-10 h-10 rounded-xl bg-amber-500 text-emerald-950 flex items-center justify-center font-bold shadow-lg">
+                  <Car className="w-5 h-5" />
+                </div>
               </div>
-              <h3 className="text-base font-bold text-slate-900">
-                {language === 'fr' ? 'Tenues Professionnelles' : 'Professional Uniforms'}
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                {language === 'fr'
-                  ? 'Polos institutionnels et blouses de laboratoire fournies selon la spécialité pour une présentation impeccable dès la première année.'
-                  : 'Institutional polo shirts and lab coats provided according to discipline for professional presentation from year one.'}
-              </p>
+              <div className="p-5 space-y-2 flex-1">
+                <h3 className="text-lg font-bold mb-1">
+                  {language === 'fr' ? 'Auto-École' : 'Driving School'}
+                </h3>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                  {language === 'fr'
+                    ? 'Formation au permis de conduire dispensée par une auto-école agréée partenaire.'
+                    : 'Driver license training delivered by an accredited partner driving school.'}
+                </p>
+              </div>
             </div>
-            <div className="pt-2 border-t border-slate-100 text-[11px] text-slate-700 font-semibold flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>{language === 'fr' ? 'Kit Fourni' : 'Kit Provided'}</span>
-            </div>
-          </div>
 
-          {/* Card 4: Clinical & Technical Labs */}
-          <div className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-slate-400 hover:shadow-sm transition-all space-y-3 flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center">
-                <Stethoscope className="w-5 h-5" />
+            {/* Item 3 */}
+            <div className="group bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all text-white flex flex-col sm:col-span-2 sm:flex-row">
+              <div className="h-40 sm:h-auto sm:w-1/3 relative overflow-hidden">
+                <img src="/images/Six_women_in_white_uniforms_202608171133.jpeg" alt="Uniforms" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-emerald-950/90 to-transparent"></div>
               </div>
-              <h3 className="text-base font-bold text-slate-900">
-                {language === 'fr' ? 'Stages Cliniques Immédiats' : 'Direct Clinical Stages'}
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                {language === 'fr'
-                  ? 'Immersion pratique dès le début du cursus biomédical et industriel en structures réelles avec encadrement de maîtres de stage.'
-                  : 'Practical immersion from the start of biomedical and engineering courses with qualified field preceptors.'}
-              </p>
+              <div className="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-center">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-slate-200 text-slate-900 flex items-center justify-center font-bold shadow-lg">
+                    <Laptop className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold">
+                    {language === 'fr' ? 'Tenues & Équipements' : 'Uniforms & Equipment'}
+                  </h3>
+                </div>
+                <p className="text-sm text-slate-300 leading-relaxed max-w-lg">
+                  {language === 'fr'
+                    ? 'Polos institutionnels et blouses de laboratoire fournies selon la spécialité pour une présentation impeccable dès la première année d\'immersion pratique.'
+                    : 'Institutional polo shirts and lab coats provided according to discipline for professional presentation from year one.'}
+                </p>
+              </div>
             </div>
-            <div className="pt-2 border-t border-slate-100 text-[11px] text-emerald-800 font-semibold flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>{language === 'fr' ? 'Encadrement Pratique' : 'Practical Mentoring'}</span>
-            </div>
+
           </div>
 
         </div>

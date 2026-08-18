@@ -169,6 +169,76 @@ export const GALLERY_DATA: GalleryItem[] = [
       en: 'Institutional poster: St Bernard crest, Bonaberi atrium tower, Mboppi campus, and academic corridors',
     },
   },
+  {
+    id: 'gal-culinary-class',
+    title: {
+      fr: 'Travaux Pratiques en Arts Culinaires & Hôtellerie',
+      en: 'Practical Arts in Culinary & Hospitality',
+    },
+    category: 'tourism',
+    visualKey: 'culinary-class',
+    imageUrl: '',
+    caption: {
+      fr: 'Étudiants en tenue de chef (toques et vestes blanches à liseré vert) en pleine séance de découpe et préparation culinaire sous la supervision d\'un chef instructeur.',
+      en: 'Students in chef attire (toques and white jackets with green trim) actively participating in a culinary preparation and cutting session under the supervision of a chef instructor.',
+    },
+  },
+  {
+    id: 'gal-fruit-carving',
+    title: {
+      fr: 'Art Culinaire : Sculpture sur Fruits & Décoration',
+      en: 'Culinary Art: Fruit Carving & Decoration',
+    },
+    category: 'tourism',
+    visualKey: 'fruit-carving',
+    imageUrl: '',
+    caption: {
+      fr: 'Chef-d\'œuvre d\'art culinaire réalisé par les étudiants : sculpture impressionnante du logo St Bernard University sur une pastèque, accompagnée d\'une composition de fruits exotiques.',
+      en: 'Culinary masterpiece created by students: an impressive carving of the St Bernard University logo on a watermelon, accompanied by a display of exotic fruits.',
+    },
+  },
+  {
+    id: 'gal-field-work',
+    title: {
+      fr: 'Agriculture & Foresterie : Travail sur le Terrain',
+      en: 'Agriculture & Forestry: Practical Field Work',
+    },
+    category: 'agriculture',
+    visualKey: 'field-work',
+    imageUrl: '',
+    caption: {
+      fr: 'Étudiants en combinaison verte de travail sur le terrain, en pause lors d\'une session pratique dans une exploitation forestière et agricole.',
+      en: 'Students in green field work jumpsuits taking a break during a practical session in a forestry and agricultural setting.',
+    },
+  },
+  {
+    id: 'gal-electrical-lab',
+    title: {
+      fr: 'Génie Électrique : Laboratoire & Câblage',
+      en: 'Electrical Engineering: Laboratory & Wiring',
+    },
+    category: 'engineering',
+    visualKey: 'electrical-lab',
+    imageUrl: '',
+    caption: {
+      fr: 'Étudiante concentrée réalisant des montages électriques et le câblage de composants industriels sur un banc d\'essai.',
+      en: 'Focused student working on electrical assemblies and wiring industrial components on a test bench.',
+    },
+  },
+  {
+    id: 'gal-maritime-training',
+    title: {
+      fr: 'Génie Maritime : Visite & Formation Portuaire',
+      en: 'Maritime Engineering: Port Visit & Training',
+    },
+    category: 'maritime',
+    visualKey: 'maritime-training',
+    imageUrl: '',
+    caption: {
+      fr: 'Étudiants en gilets haute visibilité et casques de sécurité lors d\'une formation pratique sur un navire au port autonome.',
+      en: 'Students in high-visibility vests and safety helmets during practical training on a vessel at the autonomous port.',
+    },
+  },
 ];
 
 export const FAQ_DATA: FAQItem[] = [

@@ -109,20 +109,12 @@ export const GalleryDelegationParade: React.FC<{ className?: string }> = ({ clas
   );
 };
 
-export const GalleryPromoterFounder: React.FC<{ className?: string }> = ({ className = 'w-full h-full' }) => {
+export const GalleryPromoterFounder: React.FC<{ className?: string }> = ({ className = 'w-full h-full object-cover' }) => {
   return (
-    <AcademicCardVisual
-      className={className}
-      category="Gouvernance & Leadership"
-      badgeTitle="Présidence & Promoteur Fondateur"
-      badgeSubtitle="Orientation Stratégique & Partenariats Hospitaliers"
-      badgeIcon={<Award className="w-5 h-5 text-amber-400" />}
-      gradient="bg-gradient-to-br from-slate-950 via-emerald-950 to-slate-900"
-      highlights={[
-        'Conseil académique en partenariat avec les Universités de Douala & Buea',
-        'Convention de stage clinique avec 3 hôpitaux St Bernard',
-        'Supervision pédagogique orientée vers l\'employabilité immédiate',
-      ]}
+    <img 
+      src="/images/promoter.jpg" 
+      alt="Promoter Founder of St Bernard University Institute" 
+      className={className} 
     />
   );
 };
@@ -262,14 +254,22 @@ export interface AuthenticVisualProps {
 
 export const AuthenticVisualRenderer: React.FC<AuthenticVisualProps> = ({
   visualKey,
-  className = 'w-full h-full',
+  className = 'w-full h-full object-cover',
   fallbackCategory,
+  altText,
 }) => {
   switch (visualKey) {
+    case 'promoter-founder':
+      return <img src="/images/promoter.jpg" alt={altText || "Promoter Founder"} className={className} />;
+    case 'director':
+      return <img src="/images/director.jpg" alt={altText || "Director"} className={className} />;
+    case 'bonaberi-facade':
+    case 'mboppi-facade':
+      return <img src="/images/campus-building.jpg" alt={altText || "Campus Building"} className={className} />;
+    case 'campus-collage':
+      return <img src="/images/collage.jpg" alt={altText || "Campus Activities Collage"} className={className} />;
     case 'delegation-parade':
       return <GalleryDelegationParade className={className} />;
-    case 'promoter-founder':
-      return <GalleryPromoterFounder className={className} />;
     case 'student-uniform':
       return <GalleryStudentUniform className={className} />;
     case 'biomedical-defense':
@@ -284,12 +284,16 @@ export const AuthenticVisualRenderer: React.FC<AuthenticVisualProps> = ({
       return <GalleryLaptopDistribution className={className} />;
     case 'agriculture-practical':
       return <GalleryAgriculturePractical className={className} />;
-    case 'bonaberi-facade':
-      return <BonaberiGlassFacadeGraphic className={className} />;
-    case 'mboppi-facade':
-      return <MboppiFacadeGraphic className={className} />;
-    case 'campus-collage':
-      return <OfficialCampusPosterCollage className={className} />;
+    case 'culinary-class':
+      return <img src="/images/Students_in_cooking_class_202608171134.jpeg" alt={altText || "Culinary Arts Practical Class"} className={className} />;
+    case 'fruit-carving':
+      return <img src="/images/Elaborate_fruit_carving_display_202608171133.jpeg" alt={altText || "Culinary Art Fruit Carving"} className={className} />;
+    case 'field-work':
+      return <img src="/images/Woman_working_in_field_202608171133.jpeg" alt={altText || "Agriculture Field Work"} className={className} />;
+    case 'electrical-lab':
+      return <img src="/images/Woman_working_on_electrical_project_202608171133.jpeg" alt={altText || "Electrical Engineering Lab"} className={className} />;
+    case 'maritime-training':
+      return <img src="/images/Workers_gathered_near_large_ship_202608171133.jpeg" alt={altText || "Maritime and Port Training"} className={className} />;
     default:
       if (fallbackCategory === 'biomedical' || fallbackCategory === 'academic') {
         return <GalleryBiomedicalDefense className={className} />;
@@ -301,8 +305,8 @@ export const AuthenticVisualRenderer: React.FC<AuthenticVisualProps> = ({
         return <GalleryAgriculturePractical className={className} />;
       }
       if (fallbackCategory === 'campus') {
-        return <BonaberiGlassFacadeGraphic className={className} />;
+        return <img src="/images/campus-building.jpg" alt={altText || "Campus Building"} className={className} />;
       }
-      return <GalleryDelegationParade className={className} />;
+      return <img src="/images/collage.jpg" alt={altText || "St Bernard University Activities"} className={className} />;
   }
 };

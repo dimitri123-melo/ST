@@ -3,7 +3,7 @@ import { useLanguage } from '../../locales/useLanguage';
 import { GALLERY_DATA } from '../../data/faq';
 import { GalleryItem } from '../../types';
 import { AuthenticVisualRenderer } from '../common/RealCampusGalleryVisuals';
-import { Camera, Image as ImageIcon, Sparkles, X, Eye, Maximize2, ShieldCheck, Award } from 'lucide-react';
+import { Camera, X, Maximize2, ShieldCheck } from 'lucide-react';
 
 interface RealPhotoGallerySectionProps {
   onOpenApplication?: () => void;
@@ -19,8 +19,10 @@ export const RealPhotoGallerySection: React.FC<RealPhotoGallerySectionProps> = (
     { key: 'biomedical', labelFr: 'Santé & Soins Infirmiers', labelEn: 'Biomedical & Nursing' },
     { key: 'events', labelFr: 'Défilés & Cérémonies', labelEn: 'Parades & Events' },
     { key: 'campus', labelFr: 'Campus Bonabéri & Mboppi', labelEn: 'Bonaberi & Mboppi Campuses' },
-    { key: 'engineering', labelFr: 'Informatique & Laptops', labelEn: 'IT & Laptops' },
+    { key: 'engineering', labelFr: 'Ingénierie & Informatique', labelEn: 'Engineering & IT' },
     { key: 'agriculture', labelFr: 'Agriculture & Élevage', labelEn: 'Agriculture & Farming' },
+    { key: 'tourism', labelFr: 'Hôtellerie & Restauration', labelEn: 'Hospitality & Culinary' },
+    { key: 'maritime', labelFr: 'Génie Maritime & Portuaire', labelEn: 'Maritime & Port Engineering' },
     { key: 'students', labelFr: 'Tenues & Examens', labelEn: 'Uniforms & Exams' },
     { key: 'leadership', labelFr: 'Présidence & Promoteur', labelEn: 'President & Promoter' },
   ];

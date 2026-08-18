@@ -74,70 +74,94 @@ export const StudentLifePage: React.FC<StudentLifePageProps> = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Advantage 1: Auto-école */}
-          <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-emerald-500 transition-all">
-            <div className="w-14 h-14 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold text-2xl">
-              <Car className="w-7 h-7 text-amber-700" />
+          <div className="rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-emerald-500 transition-all overflow-hidden flex flex-col group">
+            <div className="h-40 w-full relative overflow-hidden bg-slate-100">
+              <img src="/images/Woman_sitting_inside_green_car_202608171132.jpeg" alt="Driving School" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-amber-500 text-emerald-950 flex items-center justify-center font-bold text-2xl shadow-lg">
+                <Car className="w-6 h-6" />
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 font-display">
-              {t.studentLife.drivingCardTitle}
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {t.studentLife.drivingCardDesc}
-            </p>
-            <div className="pt-2 text-xs font-semibold text-emerald-800 flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>{language === 'fr' ? 'Permis de conduire catégorie B' : 'Category B Driving License Included'}</span>
+            <div className="p-6 sm:p-8 space-y-4 flex-1">
+              <h3 className="text-xl font-bold text-slate-900 font-display">
+                {t.studentLife.drivingCardTitle}
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {t.studentLife.drivingCardDesc}
+              </p>
+              <div className="pt-2 text-xs font-semibold text-emerald-800 flex items-center gap-1.5 border-t border-slate-100">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                <span>{language === 'fr' ? 'Permis de conduire catégorie B' : 'Category B Driving License Included'}</span>
+              </div>
             </div>
           </div>
 
           {/* Advantage 2: Santé 50% */}
-          <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-emerald-500 transition-all">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold text-2xl">
-              <HeartPulse className="w-7 h-7 text-emerald-700" />
+          <div className="rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-emerald-500 transition-all overflow-hidden flex flex-col group">
+            <div className="h-40 w-full relative overflow-hidden bg-slate-100">
+              <img src="/images/Medical_workers_attending_to_patient_202608171133.jpeg" alt="Health Coverage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-emerald-500 text-emerald-50 flex items-center justify-center font-bold text-2xl shadow-lg">
+                <HeartPulse className="w-6 h-6" />
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 font-display">
-              {t.studentLife.healthCardTitle}
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {t.studentLife.healthCardDesc}
-            </p>
-            <div className="pt-2 text-xs font-semibold text-emerald-800 flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>{language === 'fr' ? 'Valable dans les 3 hôpitaux partenaires St Bernard' : 'Valid across 3 partner St Bernard hospitals'}</span>
+            <div className="p-6 sm:p-8 space-y-4 flex-1">
+              <h3 className="text-xl font-bold text-slate-900 font-display">
+                {t.studentLife.healthCardTitle}
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {t.studentLife.healthCardDesc}
+              </p>
+              <div className="pt-2 text-xs font-semibold text-emerald-800 flex items-center gap-1.5 border-t border-slate-100">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                <span>{language === 'fr' ? 'Valable dans les 3 hôpitaux partenaires' : 'Valid across 3 partner hospitals'}</span>
+              </div>
             </div>
           </div>
 
           {/* Advantage 3: Uniformes */}
-          <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-emerald-500 transition-all">
-            <div className="w-14 h-14 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold text-2xl">
-              <Laptop className="w-7 h-7 text-amber-700" />
+          <div className="rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-emerald-500 transition-all overflow-hidden flex flex-col group">
+            <div className="h-40 w-full relative overflow-hidden bg-slate-100">
+              <img src="/images/Six_women_in_white_uniforms_202608171133.jpeg" alt="Academic Uniforms" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-amber-500 text-emerald-950 flex items-center justify-center font-bold text-2xl shadow-lg">
+                <Laptop className="w-6 h-6" />
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 font-display">
-              {t.studentLife.uniformsCardTitle}
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {t.studentLife.uniformsCardDesc}
-            </p>
-            <div className="pt-2 text-xs font-semibold text-emerald-800 flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>{language === 'fr' ? 'Tenues académiques de haute confection' : 'Two high-quality custom tailored uniforms'}</span>
+            <div className="p-6 sm:p-8 space-y-4 flex-1">
+              <h3 className="text-xl font-bold text-slate-900 font-display">
+                {t.studentLife.uniformsCardTitle}
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {t.studentLife.uniformsCardDesc}
+              </p>
+              <div className="pt-2 text-xs font-semibold text-emerald-800 flex items-center gap-1.5 border-t border-slate-100">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                <span>{language === 'fr' ? 'Tenues académiques de haute confection' : 'Two high-quality custom tailored uniforms'}</span>
+              </div>
             </div>
           </div>
 
           {/* Advantage 4: Stages & Insertion */}
-          <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-emerald-500 transition-all">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold text-2xl">
-              <Award className="w-7 h-7 text-emerald-700" />
+          <div className="rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-emerald-500 transition-all overflow-hidden flex flex-col group">
+            <div className="h-40 w-full relative overflow-hidden bg-slate-100">
+              <img src="/images/People_gathered_in_a_meeting_202608171133.jpeg" alt="Internships" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-emerald-500 text-emerald-50 flex items-center justify-center font-bold text-2xl shadow-lg">
+                <Award className="w-6 h-6" />
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 font-display">
-              {t.studentLife.activitiesTitle}
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {t.studentLife.activitiesDesc}
-            </p>
-            <div className="pt-2 text-xs font-semibold text-emerald-800 flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>{language === 'fr' ? 'Conventions entreprises & centres de santé' : 'Company & health centre internship placement'}</span>
+            <div className="p-6 sm:p-8 space-y-4 flex-1">
+              <h3 className="text-xl font-bold text-slate-900 font-display">
+                {t.studentLife.activitiesTitle}
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {t.studentLife.activitiesDesc}
+              </p>
+              <div className="pt-2 text-xs font-semibold text-emerald-800 flex items-center gap-1.5 border-t border-slate-100">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                <span>{language === 'fr' ? 'Conventions entreprises & centres' : 'Company & health centre internship placement'}</span>
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LanguageProvider, useLanguage } from './locales/useLanguage';
+import { LanguageProvider } from './locales/useLanguage';
 import { PageView, Programme, NewsArticle } from './types';
 import { Navbar } from './components/common/Navbar';
 import { Footer } from './components/common/Footer';
