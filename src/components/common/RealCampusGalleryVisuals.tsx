@@ -115,6 +115,8 @@ export const GalleryPromoterFounder: React.FC<{ className?: string }> = ({ class
       src="/images/promoter.jpg" 
       alt="Promoter Founder of St Bernard University Institute" 
       className={className} 
+      loading="lazy"
+      decoding="async"
     />
   );
 };
@@ -260,53 +262,53 @@ export const AuthenticVisualRenderer: React.FC<AuthenticVisualProps> = ({
 }) => {
   switch (visualKey) {
     case 'promoter-founder':
-      return <img src="/images/promoter.jpg" alt={altText || "Promoter Founder"} className={className} />;
+      return <img src="/images/promoter.jpg" alt={altText || "Promoter Founder"} className={className} loading="lazy" decoding="async" />;
     case 'director':
-      return <img src="/images/director.jpg" alt={altText || "Director"} className={className} />;
+      return <img src="/images/director.jpg" alt={altText || "Director"} className={className} loading="lazy" decoding="async" />;
     case 'bonaberi-facade':
     case 'mboppi-facade':
-      return <img src="/images/campus-building.jpg" alt={altText || "Campus Building"} className={className} />;
+      return <img src="/images/campus-building.jpg" alt={altText || "Campus Building"} className={className} loading="lazy" decoding="async" />;
     case 'campus-collage':
-      return <img src="/images/collage.jpg" alt={altText || "Campus Activities Collage"} className={className} />;
+      return <img src="/images/collage.jpg" alt={altText || "Campus Activities Collage"} className={className} loading="lazy" decoding="async" />;
     case 'delegation-parade':
-      return <GalleryDelegationParade className={className} />;
+      return <GalleryDelegationParade className={className} loading="lazy" decoding="async" />;
     case 'student-uniform':
-      return <GalleryStudentUniform className={className} />;
+      return <GalleryStudentUniform className={className} loading="lazy" decoding="async" />;
     case 'biomedical-defense':
-      return <GalleryBiomedicalDefense className={className} />;
+      return <GalleryBiomedicalDefense className={className} loading="lazy" decoding="async" />;
     case 'nursing-parade':
-      return <GalleryNursingParade className={className} />;
+      return <GalleryNursingParade className={className} loading="lazy" decoding="async" />;
     case 'exam-classroom':
-      return <GalleryExamClassroom className={className} />;
+      return <GalleryExamClassroom className={className} loading="lazy" decoding="async" />;
     case 'clinical-simulation':
-      return <GalleryClinicalSimulation className={className} />;
+      return <GalleryClinicalSimulation className={className} loading="lazy" decoding="async" />;
     case 'laptop-distribution':
-      return <GalleryLaptopDistribution className={className} />;
+      return <GalleryLaptopDistribution className={className} loading="lazy" decoding="async" />;
     case 'agriculture-practical':
-      return <GalleryAgriculturePractical className={className} />;
+      return <GalleryAgriculturePractical className={className} loading="lazy" decoding="async" />;
     case 'culinary-class':
-      return <img src="/images/Students_in_cooking_class_202608171134.jpeg" alt={altText || "Culinary Arts Practical Class"} className={className} />;
+      return <img src="/images/Students_in_cooking_class_202608171134.jpeg" alt={altText || "Culinary Arts Practical Class"} className={className} loading="lazy" decoding="async" />;
     case 'fruit-carving':
-      return <img src="/images/Elaborate_fruit_carving_display_202608171133.jpeg" alt={altText || "Culinary Art Fruit Carving"} className={className} />;
+      return <img src="/images/Elaborate_fruit_carving_display_202608171133.jpeg" alt={altText || "Culinary Art Fruit Carving"} className={className} loading="lazy" decoding="async" />;
     case 'field-work':
-      return <img src="/images/Woman_working_in_field_202608171133.jpeg" alt={altText || "Agriculture Field Work"} className={className} />;
+      return <img src="/images/Woman_working_in_field_202608171133.jpeg" alt={altText || "Agriculture Field Work"} className={className} loading="lazy" decoding="async" />;
     case 'electrical-lab':
-      return <img src="/images/Woman_working_on_electrical_project_202608171133.jpeg" alt={altText || "Electrical Engineering Lab"} className={className} />;
+      return <img src="/images/Woman_working_on_electrical_project_202608171133.jpeg" alt={altText || "Electrical Engineering Lab"} className={className} loading="lazy" decoding="async" />;
     case 'maritime-training':
-      return <img src="/images/Workers_gathered_near_large_ship_202608171133.jpeg" alt={altText || "Maritime and Port Training"} className={className} />;
+      return <img src="/images/Workers_gathered_near_large_ship_202608171133.jpeg" alt={altText || "Maritime and Port Training"} className={className} loading="lazy" decoding="async" />;
     default:
       if (fallbackCategory === 'biomedical' || fallbackCategory === 'academic') {
-        return <GalleryBiomedicalDefense className={className} />;
+        return <GalleryBiomedicalDefense className={className} loading="lazy" decoding="async" />;
       }
       if (fallbackCategory === 'engineering') {
-        return <GalleryLaptopDistribution className={className} />;
+        return <GalleryLaptopDistribution className={className} loading="lazy" decoding="async" />;
       }
       if (fallbackCategory === 'agriculture') {
-        return <GalleryAgriculturePractical className={className} />;
+        return <GalleryAgriculturePractical className={className} loading="lazy" decoding="async" />;
       }
       if (fallbackCategory === 'campus') {
-        return <img src="/images/campus-building.jpg" alt={altText || "Campus Building"} className={className} />;
+        return <img src="/images/campus-building.jpg" alt={altText || "Campus Building"} className={className} loading="lazy" decoding="async" />;
       }
-      return <img src="/images/collage.jpg" alt={altText || "St Bernard University Activities"} className={className} />;
+      return <img src="/images/collage.jpg" alt={altText || "St Bernard University Activities"} className={className} loading="lazy" decoding="async" />;
   }
 };

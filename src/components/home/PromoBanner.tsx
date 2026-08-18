@@ -65,6 +65,7 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ onClaimPromo }) => {
                   src="/images/University_scholarship_promotional_advertisement_202608171134.jpeg" 
                   alt="Tuition and Fee Schedule"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+                  loading="lazy" decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 w-10 h-10 rounded-lg bg-amber-500/90 text-slate-950 flex items-center justify-center shadow-lg">
@@ -93,6 +94,7 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ onClaimPromo }) => {
                   src="/images/Students_using_laptops_in_classroom_202608171133.jpeg" 
                   alt="Student using Laptop"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+                  loading="lazy" decoding="async"
                 />
                 <div className="absolute top-3 right-3 bg-amber-500 text-emerald-950 font-extrabold text-[10px] uppercase px-2.5 py-1 rounded-md shadow-sm">
                   St Bernard
@@ -125,6 +127,7 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ onClaimPromo }) => {
                   alt="Connected Smartphone"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
                   style={{ objectPosition: 'center 20%' }}
+                  loading="lazy" decoding="async"
                 />
                 <div className="absolute top-3 right-3 bg-amber-500 text-emerald-950 font-extrabold text-[10px] uppercase px-2.5 py-1 rounded-md shadow-sm">
                   St Bernard

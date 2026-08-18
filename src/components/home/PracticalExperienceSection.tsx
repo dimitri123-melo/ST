@@ -18,6 +18,7 @@ export const PracticalExperienceSection: React.FC = () => {
           src="/images/Medical_students_training_around_patient_202608171133.jpeg"
           alt="Practical Student Experience"
           className="w-full h-full object-cover filter brightness-[0.35]"
+          loading="lazy" decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/80 to-slate-900/60"></div>
       </div>
@@ -51,7 +52,7 @@ export const PracticalExperienceSection: React.FC = () => {
             {/* Item 1 */}
             <div className="group bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all text-white flex flex-col">
               <div className="h-32 w-full relative overflow-hidden">
-                <img src="/images/Medical_workers_attending_to_patient_202608171133.jpeg" alt="Healthcare Coverage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
+                <img src="/images/Medical_workers_attending_to_patient_202608171133.jpeg" alt="Healthcare Coverage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent"></div>
                 <div className="absolute bottom-3 left-4 w-10 h-10 rounded-xl bg-emerald-500 text-emerald-950 flex items-center justify-center font-bold shadow-lg">
                   <HeartPulse className="w-5 h-5" />
@@ -72,7 +73,7 @@ export const PracticalExperienceSection: React.FC = () => {
             {/* Item 2 */}
             <div className="group bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all text-white flex flex-col">
               <div className="h-32 w-full relative overflow-hidden">
-                <img src="/images/Woman_sitting_inside_green_car_202608171132.jpeg" alt="Driving School" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
+                <img src="/images/Woman_sitting_inside_green_car_202608171132.jpeg" alt="Driving School" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent"></div>
                 <div className="absolute bottom-3 left-4 w-10 h-10 rounded-xl bg-amber-500 text-emerald-950 flex items-center justify-center font-bold shadow-lg">
                   <Car className="w-5 h-5" />
@@ -93,7 +94,7 @@ export const PracticalExperienceSection: React.FC = () => {
             {/* Item 3 */}
             <div className="group bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all text-white flex flex-col sm:col-span-2 sm:flex-row">
               <div className="h-40 sm:h-auto sm:w-1/3 relative overflow-hidden">
-                <img src="/images/Six_women_in_white_uniforms_202608171133.jpeg" alt="Uniforms" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
+                <img src="/images/Six_women_in_white_uniforms_202608171133.jpeg" alt="Uniforms" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-emerald-950/90 to-transparent"></div>
               </div>
               <div className="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-center">

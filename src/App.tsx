@@ -5,23 +5,23 @@ import { Navbar } from './components/common/Navbar';
 import { Footer } from './components/common/Footer';
 import { WhatsAppFloat } from './components/common/WhatsAppFloat';
 
-// Pages
-import { HomePage } from './pages/HomePage';
-import { AboutPage } from './pages/AboutPage';
-import { ProgrammesPage } from './pages/ProgrammesPage';
-import { AdmissionsPage } from './pages/AdmissionsPage';
-import { CampusesPage } from './pages/CampusesPage';
-import { StudentLifePage } from './pages/StudentLifePage';
-import { NewsPage } from './pages/NewsPage';
-import { FAQPage } from './pages/FAQPage';
-import { ContactPage } from './pages/ContactPage';
+// Pages (Lazy Loaded)
+const HomePage = React.lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })));
+const AboutPage = React.lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
+const ProgrammesPage = React.lazy(() => import('./pages/ProgrammesPage').then(m => ({ default: m.ProgrammesPage })));
+const AdmissionsPage = React.lazy(() => import('./pages/AdmissionsPage').then(m => ({ default: m.AdmissionsPage })));
+const CampusesPage = React.lazy(() => import('./pages/CampusesPage').then(m => ({ default: m.CampusesPage })));
+const StudentLifePage = React.lazy(() => import('./pages/StudentLifePage').then(m => ({ default: m.StudentLifePage })));
+const NewsPage = React.lazy(() => import('./pages/NewsPage').then(m => ({ default: m.NewsPage })));
+const FAQPage = React.lazy(() => import('./pages/FAQPage').then(m => ({ default: m.FAQPage })));
+const ContactPage = React.lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
 
-// Modals
-import { ApplicationModal } from './components/admissions/ApplicationModal';
-import { OrientationModal } from './components/orientation/OrientationModal';
-import { ProgrammeDetailModal } from './components/programmes/ProgrammeDetailModal';
-import { NewsDetailModal } from './components/news/NewsDetailModal';
-import { LegalModal } from './components/legal/LegalModal';
+// Modals (Lazy Loaded)
+const ApplicationModal = React.lazy(() => import('./components/admissions/ApplicationModal').then(m => ({ default: m.ApplicationModal })));
+const OrientationModal = React.lazy(() => import('./components/orientation/OrientationModal').then(m => ({ default: m.OrientationModal })));
+const ProgrammeDetailModal = React.lazy(() => import('./components/programmes/ProgrammeDetailModal').then(m => ({ default: m.ProgrammeDetailModal })));
+const NewsDetailModal = React.lazy(() => import('./components/news/NewsDetailModal').then(m => ({ default: m.NewsDetailModal })));
+const LegalModal = React.lazy(() => import('./components/legal/LegalModal').then(m => ({ default: m.LegalModal })));
 
 function MainAppContent() {
   const [currentPage, setCurrentPage] = useState<PageView>('home');
@@ -67,68 +67,70 @@ function MainAppContent() {
 
       {/* 2. Main Page Views */}
       <main className="flex-grow">
-        {currentPage === 'home' && (
-          <HomePage
-            onOpenApplication={handleOpenApplication}
-            onOpenOrientation={handleOpenOrientation}
-            onSelectProgramme={(prog) => setSelectedProgramme(prog)}
-            onSelectArticle={(article) => setSelectedArticle(article)}
-            onNavigate={handleNavigate}
-          />
-        )}
+        <React.Suspense fallback={<div className="min-h-[50vh] flex items-center justify-center text-emerald-800 font-bold animate-pulse">Chargement / Loading...</div>}>
+          {currentPage === 'home' && (
+            <HomePage
+              onOpenApplication={handleOpenApplication}
+              onOpenOrientation={handleOpenOrientation}
+              onSelectProgramme={(prog) => setSelectedProgramme(prog)}
+              onSelectArticle={(article) => setSelectedArticle(article)}
+              onNavigate={handleNavigate}
+            />
+          )}
 
-        {currentPage === 'about' && (
-          <AboutPage
-            onOpenApplication={handleOpenApplication}
-            onOpenOrientation={handleOpenOrientation}
-            onNavigate={handleNavigate}
-          />
-        )}
+          {currentPage === 'about' && (
+            <AboutPage
+              onOpenApplication={handleOpenApplication}
+              onOpenOrientation={handleOpenOrientation}
+              onNavigate={handleNavigate}
+            />
+          )}
 
-        {currentPage === 'programmes' && (
-          <ProgrammesPage
-            onSelectProgramme={(prog) => setSelectedProgramme(prog)}
-            onOpenApplication={handleOpenApplication}
-            onOpenOrientation={handleOpenOrientation}
-          />
-        )}
+          {currentPage === 'programmes' && (
+            <ProgrammesPage
+              onSelectProgramme={(prog) => setSelectedProgramme(prog)}
+              onOpenApplication={handleOpenApplication}
+              onOpenOrientation={handleOpenOrientation}
+            />
+          )}
 
-        {currentPage === 'admissions' && (
-          <AdmissionsPage
-            onOpenApplication={handleOpenApplication}
-            onOpenOrientation={handleOpenOrientation}
-          />
-        )}
+          {currentPage === 'admissions' && (
+            <AdmissionsPage
+              onOpenApplication={handleOpenApplication}
+              onOpenOrientation={handleOpenOrientation}
+            />
+          )}
 
-        {currentPage === 'campuses' && (
-          <CampusesPage
-            onOpenApplication={handleOpenApplication}
-          />
-        )}
+          {currentPage === 'campuses' && (
+            <CampusesPage
+              onOpenApplication={handleOpenApplication}
+            />
+          )}
 
-        {currentPage === 'student-life' && (
-          <StudentLifePage
-            onOpenApplication={() => handleOpenApplication()}
-            onOpenOrientation={handleOpenOrientation}
-          />
-        )}
+          {currentPage === 'student-life' && (
+            <StudentLifePage
+              onOpenApplication={() => handleOpenApplication()}
+              onOpenOrientation={handleOpenOrientation}
+            />
+          )}
 
-        {currentPage === 'news' && (
-          <NewsPage
-            onSelectArticle={(article) => setSelectedArticle(article)}
-          />
-        )}
+          {currentPage === 'news' && (
+            <NewsPage
+              onSelectArticle={(article) => setSelectedArticle(article)}
+            />
+          )}
 
-        {currentPage === 'faq' && (
-          <FAQPage
-            onOpenApplication={() => handleOpenApplication()}
-            onOpenOrientation={handleOpenOrientation}
-          />
-        )}
+          {currentPage === 'faq' && (
+            <FAQPage
+              onOpenApplication={() => handleOpenApplication()}
+              onOpenOrientation={handleOpenOrientation}
+            />
+          )}
 
-        {currentPage === 'contact' && (
-          <ContactPage />
-        )}
+          {currentPage === 'contact' && (
+            <ContactPage />
+          )}
+        </React.Suspense>
       </main>
 
       {/* 3. Footer */}
@@ -143,39 +145,41 @@ function MainAppContent() {
       <WhatsAppFloat />
 
       {/* 5. Modals & Overlays */}
-      <ApplicationModal
-        isOpen={isApplicationModalOpen}
-        onClose={() => setIsApplicationModalOpen(false)}
-        initialDomain={appModalDomain}
-        initialProgramme={appModalProgramme}
-      />
+      <React.Suspense fallback={null}>
+        <ApplicationModal
+          isOpen={isApplicationModalOpen}
+          onClose={() => setIsApplicationModalOpen(false)}
+          initialDomain={appModalDomain}
+          initialProgramme={appModalProgramme}
+        />
 
-      <OrientationModal
-        isOpen={isOrientationModalOpen}
-        onClose={() => setIsOrientationModalOpen(false)}
-        onSelectProgrammeForApply={(domain, progName) => {
-          handleOpenApplication(domain, progName);
-        }}
-      />
+        <OrientationModal
+          isOpen={isOrientationModalOpen}
+          onClose={() => setIsOrientationModalOpen(false)}
+          onSelectProgrammeForApply={(domain, progName) => {
+            handleOpenApplication(domain, progName);
+          }}
+        />
 
-      <ProgrammeDetailModal
-        programme={selectedProgramme}
-        onClose={() => setSelectedProgramme(null)}
-        onApply={(domain, progName) => {
-          setSelectedProgramme(null);
-          handleOpenApplication(domain, progName);
-        }}
-      />
+        <ProgrammeDetailModal
+          programme={selectedProgramme}
+          onClose={() => setSelectedProgramme(null)}
+          onApply={(domain, progName) => {
+            setSelectedProgramme(null);
+            handleOpenApplication(domain, progName);
+          }}
+        />
 
-      <NewsDetailModal
-        article={selectedArticle}
-        onClose={() => setSelectedArticle(null)}
-      />
+        <NewsDetailModal
+          article={selectedArticle}
+          onClose={() => setSelectedArticle(null)}
+        />
 
-      <LegalModal
-        type={legalModalType}
-        onClose={() => setLegalModalType(null)}
-      />
+        <LegalModal
+          type={legalModalType}
+          onClose={() => setLegalModalType(null)}
+        />
+      </React.Suspense>
     </div>
   );
 }

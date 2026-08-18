@@ -64,6 +64,8 @@ export const MboppiFacadeGraphic: React.FC<{ className?: string }> = ({ classNam
       src="/images/campus-building.jpg" 
       alt="Mboppi Campus - Behind ECOBANK"
       className={className}
+      loading="lazy"
+      decoding="async"
     />
   );
 };
@@ -77,6 +79,8 @@ export const OfficialCampusPosterCollage: React.FC<{ className?: string }> = ({ 
       src="/images/collage.jpg" 
       alt="St Bernard University Campuses and Activities"
       className={className}
+      loading="lazy"
+      decoding="async"
     />
   );
 };

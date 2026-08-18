@@ -76,7 +76,7 @@ export const StudentLifePage: React.FC<StudentLifePageProps> = ({
           {/* Advantage 1: Auto-école */}
           <div className="rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-emerald-500 transition-all overflow-hidden flex flex-col group">
             <div className="h-40 w-full relative overflow-hidden bg-slate-100">
-              <img src="/images/Woman_sitting_inside_green_car_202608171132.jpeg" alt="Driving School" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/images/Woman_sitting_inside_green_car_202608171132.jpeg" alt="Driving School" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-amber-500 text-emerald-950 flex items-center justify-center font-bold text-2xl shadow-lg">
                 <Car className="w-6 h-6" />
@@ -99,7 +99,7 @@ export const StudentLifePage: React.FC<StudentLifePageProps> = ({
           {/* Advantage 2: Santé 50% */}
           <div className="rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-emerald-500 transition-all overflow-hidden flex flex-col group">
             <div className="h-40 w-full relative overflow-hidden bg-slate-100">
-              <img src="/images/Medical_workers_attending_to_patient_202608171133.jpeg" alt="Health Coverage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/images/Medical_workers_attending_to_patient_202608171133.jpeg" alt="Health Coverage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-emerald-500 text-emerald-50 flex items-center justify-center font-bold text-2xl shadow-lg">
                 <HeartPulse className="w-6 h-6" />
@@ -122,7 +122,7 @@ export const StudentLifePage: React.FC<StudentLifePageProps> = ({
           {/* Advantage 3: Uniformes */}
           <div className="rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-emerald-500 transition-all overflow-hidden flex flex-col group">
             <div className="h-40 w-full relative overflow-hidden bg-slate-100">
-              <img src="/images/Six_women_in_white_uniforms_202608171133.jpeg" alt="Academic Uniforms" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+              <img src="/images/Six_women_in_white_uniforms_202608171133.jpeg" alt="Academic Uniforms" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-amber-500 text-emerald-950 flex items-center justify-center font-bold text-2xl shadow-lg">
                 <Laptop className="w-6 h-6" />
@@ -145,7 +145,7 @@ export const StudentLifePage: React.FC<StudentLifePageProps> = ({
           {/* Advantage 4: Stages & Insertion */}
           <div className="rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-emerald-500 transition-all overflow-hidden flex flex-col group">
             <div className="h-40 w-full relative overflow-hidden bg-slate-100">
-              <img src="/images/People_gathered_in_a_meeting_202608171133.jpeg" alt="Internships" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/images/People_gathered_in_a_meeting_202608171133.jpeg" alt="Internships" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-emerald-500 text-emerald-50 flex items-center justify-center font-bold text-2xl shadow-lg">
                 <Award className="w-6 h-6" />

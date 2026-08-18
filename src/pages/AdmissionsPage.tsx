@@ -144,7 +144,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="group relative p-5 rounded-2xl border border-emerald-700/60 overflow-hidden flex flex-col justify-end min-h-[160px]">
-              <img src="/images/Woman_sitting_inside_green_car_202608171132.jpeg" alt="Auto Ecole" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105" />
+              <img src="/images/Woman_sitting_inside_green_car_202608171132.jpeg" alt="Auto Ecole" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/80 to-transparent"></div>
               <div className="relative z-10 space-y-2">
                 <div className="w-8 h-8 rounded-lg bg-amber-400 text-emerald-950 flex items-center justify-center font-bold shadow-md">
@@ -162,7 +162,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
             </div>
 
             <div className="group relative p-5 rounded-2xl border border-emerald-700/60 overflow-hidden flex flex-col justify-end min-h-[160px]">
-              <img src="/images/Medical_workers_attending_to_patient_202608171133.jpeg" alt="Santé" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105" />
+              <img src="/images/Medical_workers_attending_to_patient_202608171133.jpeg" alt="Santé" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/80 to-transparent"></div>
               <div className="relative z-10 space-y-2">
                 <div className="w-8 h-8 rounded-lg bg-amber-400 text-emerald-950 flex items-center justify-center font-bold shadow-md">
@@ -180,7 +180,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
             </div>
 
             <div className="group relative p-5 rounded-2xl border border-emerald-700/60 overflow-hidden flex flex-col justify-end min-h-[160px]">
-              <img src="/images/Students_using_laptops_in_classroom_202608171133.jpeg" alt="Laptop" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105" />
+              <img src="/images/Students_using_laptops_in_classroom_202608171133.jpeg" alt="Laptop" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/80 to-transparent"></div>
               <div className="relative z-10 space-y-2">
                 <div className="w-8 h-8 rounded-lg bg-amber-400 text-emerald-950 flex items-center justify-center font-bold shadow-md">
@@ -198,7 +198,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
             </div>
 
             <div className="group relative p-5 rounded-2xl border border-emerald-700/60 overflow-hidden flex flex-col justify-end min-h-[160px]">
-              <img src="/images/Six_women_in_white_uniforms_202608171133.jpeg" alt="Uniforms" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105 object-top" />
+              <img src="/images/Six_women_in_white_uniforms_202608171133.jpeg" alt="Uniforms" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105 object-top" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/80 to-transparent"></div>
               <div className="relative z-10 space-y-2">
                 <div className="w-8 h-8 rounded-lg bg-amber-400 text-emerald-950 flex items-center justify-center font-bold shadow-md">
